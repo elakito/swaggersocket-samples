@@ -1,0 +1,7 @@
+{
+  "name": "NodeSampleSwaggerSocketEcho",
+  "version": "0.0.1",
+  "dependencies": {
+    "swaggersocket-client": "^2.0.0"
+  }
+}
