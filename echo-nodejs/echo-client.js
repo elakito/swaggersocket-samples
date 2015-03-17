@@ -6,6 +6,9 @@
  * https://github.com/elakito/swaggersocket-samples
  * 
  */
+
+"use strict";
+
 var reader = require('readline');
 var prompt = reader.createInterface(process.stdin, process.stdout);
 
