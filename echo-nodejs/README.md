@@ -16,6 +16,6 @@ npm install
 ### Run
 
 ```bash
-node client.js
+onode echo-client.js
 ```
 
