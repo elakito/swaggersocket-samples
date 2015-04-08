@@ -1,1 +1,9 @@
+.DS_Store
+.checkstyle
+.classpath
+.pmd
+.project
+.ruleset
+.settings/
+target/
 node_modules
