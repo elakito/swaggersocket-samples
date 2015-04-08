@@ -43,11 +43,3 @@ To install this sample bundle, run the karaf console command.
 ```bash
   install -s install mvn:de.elakito.swaggersocket.samples/osgi-cxf-echo-service
 ```
-
-You can invoke the provided services using your websocket client or
-use the unit tests included in this package (the unit tests are deactivated
-by default). 
-
-
-See
-../instruction_osgi_cxf_swaggersocket_sample_route.txt
