@@ -1,14 +1,17 @@
 # swaggersocket-samples
 
-Start the server part of the swaggersocket-echo program.
+Some SwaggerSocket Samples.
 
-Download [swaggersocket-sample-echo](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.wordnik%22%20AND%20a%3A%22swaggersocket-sample-echo%22) | [github](https://github.com/swagger-api/swagger-socket/blob/master/samples/swaggersocket-echo/)
+### echo-nodejs
+A node.js client that can call SwaggerSocket's Echo Sample service.
+In order to run this sample, you need SwaggerSocket's Echo Sample.
 
-After the server has been started, start this client by executing the following shell commands.
 
-```bash
-% cd echo-nodejs
-% npm install
-% node echo-client.js
-```
+### osgi_cxf_echo_service
+An OSGi bundle that can demonstrate How CXF's SwaggerSocket feature can be
+enabled to host a JAXRS service that can be invoked using SwaggerSocket.
+
+
+### olingo_car_server
+A SwaggerSocket enabled version of Olingo's OData Cars service.
 

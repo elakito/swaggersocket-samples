@@ -21,8 +21,10 @@
     <junit-version>4.11</junit-version>
     <maven-surefire-report-plugin-version>2.17</maven-surefire-report-plugin-version>
     <netty3-version>3.9.1.Final</netty3-version>
+    <olingo-version>4.0.0-beta-03-SNAPSHOT</olingo-version>
     <osgi-version>4.2.0</osgi-version>
     <spring-version>3.2.6.RELEASE</spring-version>
+    <swaggersocket-version>2.0.1-SNAPSHOT</swaggersocket-version>
     <swaggersocket-version-range>[2.0,3)</swaggersocket-version-range>
   </properties>
   <modules>
@@ -37,6 +39,23 @@
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jetty-version}</version>
+        <configuration>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <webAppConfig>
+            <contextPath>/</contextPath>
+          </webAppConfig>
+          <connectors>
+            <!-- 
+              The default connector org.eclipse.jetty.server.nio.SelectChannelConnector at port 8080 is u
+              To use a different port, set system property jetty.port.
+               -->
+          </connectors>
         </configuration>
       </plugin>
     </plugins>
