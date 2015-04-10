@@ -24,7 +24,7 @@
     <olingo-version>4.0.0-beta-03-SNAPSHOT</olingo-version>
     <osgi-version>4.2.0</osgi-version>
     <spring-version>3.2.6.RELEASE</spring-version>
-    <swaggersocket-version>2.0.1-SNAPSHOT</swaggersocket-version>
+    <swaggersocket-version>2.0.1</swaggersocket-version>
     <swaggersocket-version-range>[2.0,3)</swaggersocket-version-range>
   </properties>
   <modules>
