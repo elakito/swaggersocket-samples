@@ -29,6 +29,7 @@
   </properties>
   <modules>
     <module>osgi_cxf_echo_service</module>
+    <module>olingo_car_server</module>
 
   </modules>
   <build>

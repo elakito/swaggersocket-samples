@@ -41,5 +41,5 @@ commands. (Note we need CXF 3.0.5 or newer to get the integrated atmosphere supp
 To install this sample bundle, run the karaf console command.
 
 ```bash
-  install -s install mvn:de.elakito.swaggersocket.samples/osgi-cxf-echo-service
+  install -s mvn:de.elakito.swaggersocket.samples/osgi-cxf-echo-service
 ```
