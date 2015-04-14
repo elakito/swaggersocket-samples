@@ -26,7 +26,7 @@ karaf container.
 To install the SwaggerSocket feature, run the following karaf console commands.
 
 ```bash
-feature:repo-add mvn:com.wordnik/swaggersocket-karaf-features/2.0.1-SNAPSHOT/xml/features
+feature:repo-add mvn:com.wordnik/swaggersocket-karaf-features/2.0.1/xml/features
 feature:install swaggersocket-server
 ```
 
