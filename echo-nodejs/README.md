@@ -7,9 +7,26 @@ SwaggerSocket Echo Sample [download sample](http://search.maven.org/#search%7Cga
 
 For more details, refer to [https://github.com/swagger-api/swagger-socket](https://github.com/swagger-api/swagger-socket)
 
-### Install
+### Prerequisite
+Go to the Download page mentioned above and download distribution.zip
+Unzip this file into some directory.
+
+For example, when using version 2.0.1, you execute the following commands at the Console
 
 ```bash
+unzip swaggersocket-sample-echo-2.0.1-distribution.zip -d swaggersocket-sample-echo
+cd swaggersocket-sample-echo
+chmod a+x bin/nettosphere.sh
+bin/nettosphere.sh
+```
+
+
+### Install
+
+To install this client, you go to this sample directory and execute the following command at anothe Console
+
+```bash
+cd echo-nodejs
 npm install
 ```
 
@@ -19,3 +36,16 @@ npm install
 node echo-client.js
 ```
 
+This will start an interactive shell shown below, where you can type in a message to be echoed at the message prompt.
+
+```code
+Connecting ...
+----------------------------
+STATUS: OK
+SwaggerSocket connected
+----------------------------
+message: Hello
+Sending a request using uuid 1429267164385
+> Response for Request: 1429267164385 is 'Hello'
+message: 
+```
