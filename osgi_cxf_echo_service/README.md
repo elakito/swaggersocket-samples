@@ -64,6 +64,8 @@ feature:repo-add mvn:com.wordnik/swaggersocket-karaf-features/2.0.1/xml/features
 feature:install swaggersocket-server
 ```
 
+#### Install CXF WebSocket feature
+
 To install the CXF websocket feature, run the following karaf console
 commands. (Note we need CXF 3.0.5 or newer to get the integrated atmosphere support)
 
@@ -72,13 +74,15 @@ commands. (Note we need CXF 3.0.5 or newer to get the integrated atmosphere supp
   feature:install cxf-jaxrs cxf-transports-websocket-server
 ```
 
+#### Install this sample bundle
+
 To install this sample bundle, run the karaf console command.
 
 ```bash
   install -s mvn:de.elakito.swaggersocket.samples/osgi-cxf-echo-service
 ```
 
-Shown below is the output from the above commands.
+Shown below is the output from running the above Karaf console commands.
 
 ```bash
 karaf@root()> feature:repo-add mvn:com.wordnik/swaggersocket-karaf-features/2.0.1/xml/features
@@ -110,6 +114,8 @@ Name                      State      Address                                    
 [SwaggerSocketResource  ] [Started ] [/RestContext/swaggersocket_echo                           ] [de.elakito.swaggersocket.samples.osgi-cxf-echo-service-cxf35153316]
 karaf@root()> 
 ```
+
+#### Testing this demo
 
 Using Browser, open [http://localhost:8181/cxf](http://localhost:8181/cxf) to view the installed endpoint and open [http://localhost:8181/cxf/RestContext/swaggersocket_echo](http://localhost:8181/cxf/RestContext/swaggersocket_echo) to go to this sample's echo page.
 

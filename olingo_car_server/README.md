@@ -29,7 +29,9 @@ Alternatively, you can use the embedded jetty using mvn jetty:run
 mvn jetty:run
 ```
 
-You can open [http://localhost:8080/](http://localhost:8080/) to access the default page and see some available
+#### Testing this demo
+
+Using Browser, open [http://localhost:8080/](http://localhost:8080/) to access the default page and see some available
 queries. You can invoke these queries over HTTP by clicking on those links or directly typing
 in the queries in Browser's URL field.
 
@@ -38,6 +40,4 @@ To use SwaggerSocket to invoke these queries, open [http://localhost:8080/index.
 The page uses swaggersocket.js to connect to the server and invoke
 the queries asynchronously over a single WebSocket. To view which SwaggerSocket messages are sent and received, you can go to
 the fallback page at [http://localhost:8080/index_fallback.html](http://localhost:8080/index_fallback.html) which uses a plain javascript to invoke the queries and displays the transcribed SwaggerSocket messages.
-
-
 
