@@ -16,7 +16,7 @@ enabled to host a JAXRS service that can be invoked using SwaggerSocket.
 
 >A SwaggerSocket enabled version of Olingo's OData Cars service.
 
-* [osgi_olingo_car_server](olingo_car_server/README.md)
+* [osgi_olingo_car_server](osgi_olingo_car_server/README.md)
 
 >An OSGi bundle version of olingo_car_server.
 
