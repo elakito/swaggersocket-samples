@@ -70,7 +70,7 @@ bundle:install -s mvn:com.fasterxml.jackson.core/jackson-databind/2.4.1
 ```
 
 Now, install the olingo bundles by running the following commands. Note that
-we assume we are using the patched version OLINGO-xxx.
+we assume we are using the patched version regarding OLINGO-632.
 
 ```bash
 bundle:install -s mvn:org.apache.olingo/odata-commons-api/4.0.0-beta-03-SNAPSHOT
