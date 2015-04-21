@@ -54,6 +54,22 @@ Hit '<ctrl-d>' or type 'system:shutdown' or 'logout' to shutdown Karaf.
 
 karaf@root()>
 ```
+#### Note on using Karaf behind a firewall
+
+If you do not have a direct access to the maven central repositories, you need to set Karaf's property
+org.ops4j.pax.url.mvn.repositories to point to your local repository
+
+To use your local repository http://nexus.mycorp.com:8081/nexus/content/groups/build.milestone, run the following commands.
+
+```
+config:edit org.ops4j.pax.url.mvn
+config:property-set org.ops4j.pax.url.mvn.repositories http://nexus.mycorp.com:8081/nexus/content/groups/build.milestone
+config:update
+```
+
+Alternatively, you can edit this property in file etc/org.ops4j.pax.url.mvn.cfg.
+
+For further details, please refer to [Karaf User Guide](http://karaf.apache.org/manual/latest/users-guide/index.html).
 
 #### Install SwaggerSocket feature
 
