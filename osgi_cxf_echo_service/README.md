@@ -1,4 +1,4 @@
-Apache CXF JAXRS SwaggerSocket echo service
+Apache CXF JAXRS SwaggerSocket echo service on Karaf
 =================================================
 
 This demo illustrates how to develop a simple CXF jaxrs based
@@ -133,7 +133,7 @@ karaf@root()>
 
 #### Testing this demo
 
-Using Browser, open [http://localhost:8181/cxf](http://localhost:8181/cxf) to view the installed endpoint and open [http://localhost:8181/cxf/RestContext/swaggersocket_echo](http://localhost:8181/cxf/RestContext/swaggersocket_echo) to go to this sample's echo page.
+Using Browser, open [http://localhost:8181/cxf](http://localhost:8181/cxf) to view the installed endpoint and open [http://localhost:8181/cxf/RestContext/swaggersocket_echo/](http://localhost:8181/cxf/RestContext/swaggersocket_echo/) to go to this sample's echo page.
 
 Enter some text and publish it to the server. You can choose the operation implemented by the echo service.
 
