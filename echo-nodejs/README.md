@@ -1,7 +1,7 @@
 echo-nodejs
 ==================
 A node.js client that can call SwaggerSocket's Echo Sample service.
-In order to run this sample, you need SwaggerSocket's Echo Sample.
+In order to run this sample, you need SwaggerSocket's Echo Sample or one of the other SwaggerSocket echo samples.
 
 SwaggerSocket Echo Sample [download sample](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.wordnik%22%20AND%20a%3A%22swaggersocket-sample-echo%22) | [README](https://github.com/swagger-api/swagger-socket/blob/master/samples/swaggersocket-echo/README.txt)
 
@@ -39,6 +39,7 @@ node echo-client.js
 This will start an interactive shell shown below, where you can type in a message to be echoed at the message prompt.
 
 ```code
+Using the target URL: http://localhost:8080/
 Connecting ...
 ----------------------------
 STATUS: OK
@@ -49,3 +50,13 @@ Sending a request using uuid 1429267164385
 > Response for Request: 1429267164385 is 'Hello'
 message: 
 ```
+
+
+If you are using an echo service running at another URL, you can set it as the command argument.
+For example, if you are using osgi_cxf_echo_service, you can start this client with
+
+```bash
+node echo-client.js http://localhost:8181/cxf/RestContext/swaggersocket_echo/
+```
+
+

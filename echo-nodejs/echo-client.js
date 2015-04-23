@@ -17,6 +17,13 @@ var swaggersocket = require('swaggersocket-client');
 var ss = new swaggersocket.SwaggerSocketListener();
 var swaggerSocket = new swaggersocket.SwaggerSocket();
 var isopen = false;
+var target = process.argv.slice(2)[0];
+
+if (typeof(target) == 'undefined') {
+    target = 'http://localhost:8080/';
+} else if (target[target.length - 1] != '/') {
+    target = target + '/';
+}
 
 ss.onOpen = function(r) {
     console.log("----------------------------");
@@ -50,8 +57,10 @@ ss.onError = function(response) {
     console.log("----------------------------");
 };
 
+console.log("Using the target URL: " + target);
+
 var request = new swaggersocket.Request()
-    .path('http://localhost:8080/swaggersocket')
+    .path(target + 'swaggersocket')
     .dataFormat("text/plain")
     .listener(ss);
 swaggerSocket.open(request);

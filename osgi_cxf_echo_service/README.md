@@ -139,3 +139,4 @@ Enter some text and publish it to the server. You can choose the operation imple
 
 To observe the detailed interaction, you can go to the [fallback page](http://localhost:8181/cxf/RestContext/swaggersocket_echo/fallback), which can display each SwaggerSocket messages that are sent and received.
 
+You can also try the node.js client of sample [echo-nodjs](../echo-nodejs/README.md) with the target URL: http://localhost:8181/cxf/RestContext/swaggersocket_echo
