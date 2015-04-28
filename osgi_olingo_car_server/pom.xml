@@ -94,7 +94,6 @@
                             com.wordnik.swaggersocket.protocol,
                             com.wordnik.swaggersocket.server,
                             org.apache.olingo.server.api*,
-                            org.apache.olingo.server.core,
                             org.apache.catalina;resolution:=optional,
                             org.apache.catalina.comet;resolution:=optional,
                             org.apache.catalina.websocket;resolution:=optional,
