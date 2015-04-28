@@ -55,8 +55,7 @@ public class CarsServlet extends HttpServlet {
         LOG.info("Created new data provider.");
       }
 
-      // REVISIT workaround for the current cyclic dependency between odata-server-api and odata-server-core
-      OData odata = new ODataImpl();
+      OData odata = OData.newInstance();
       ServiceMetadata edm = odata.createServiceMetadata(new CarsEdmProvider(), new ArrayList<EdmxReference>());
       ODataHttpHandler handler = odata.createHandler(edm);
       handler.register(new CarsProcessor(dataProvider));
