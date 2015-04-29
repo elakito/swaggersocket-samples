@@ -17,9 +17,6 @@
     <jaxrs:providers>
       <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
     </jaxrs:providers>
-    <jaxrs:features>
-      <cxf:logging/>
-     </jaxrs:features>
   </jaxrs:server>
 
   <bean class="com.wordnik.swaggersocket.samples.SwaggerSocketResource"
@@ -32,7 +29,9 @@
 
   <cxf:bus>
      <cxf:features>
+<!--
        <cxf:logging/>
+-->
      </cxf:features>
      <cxf:properties>
          <entry key="atmosphere.interceptors" value-ref="protocolInterceptor"/>
