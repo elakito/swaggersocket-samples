@@ -10,8 +10,7 @@
             var identity = 0;
             var ss = new jQuery.swaggersocket.SwaggerSocketListener();
             var swaggerSocket = new jQuery.swaggersocket.SwaggerSocket();
-            //FIXME temporarily disabling warmup
-            var warmup = false;
+            var warmup = true;
 
             ss.onOpen = function(r) {
                 $('ul').prepend($('<li></li>').text("----------------------------"));
