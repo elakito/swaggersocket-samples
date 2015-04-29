@@ -12,7 +12,7 @@
   <properties>
     <ahc-version>1.8.14</ahc-version>
     <aries-blueprint-api-version>1.0.0</aries-blueprint-api-version>
-    <atmosphere-version>2.2.6</atmosphere-version>
+    <atmosphere-version>2.2.7-SNAPSHOT</atmosphere-version>
     <atmosphere-version-range>[2.0,3)</atmosphere-version-range>
     <cxf-version>3.0.5-SNAPSHOT</cxf-version>
     <cxf-version-range>[2.6,4)</cxf-version-range>
@@ -25,7 +25,7 @@
     <olingo-version>4.0.0-beta-03-SNAPSHOT</olingo-version>
     <osgi-version>4.2.0</osgi-version>
     <spring-version>3.2.6.RELEASE</spring-version>
-    <swaggersocket-version>2.0.1</swaggersocket-version>
+    <swaggersocket-version>2.0.2-SNAPSHOT</swaggersocket-version>
     <swaggersocket-version-range>[2.0,3)</swaggersocket-version-range>
   </properties>
   <modules>
