@@ -7,11 +7,11 @@ Some [SwaggerSocket](https://github.com/swagger-api/swagger-socket) Samples.
 >A node.js client that can call SwaggerSocket's Echo Sample service.
 In order to run this sample, you need SwaggerSocket's Echo Sample.
 
-* [cxf_echo_service](osgi_cxf_echo_service/README.md)
+* [cxf_echo_service](cxf_echo_service/README.md)
 
 >A sample web application that demonstrate How [Apache CXF](http://cxf.apache.org)'s SwaggerSocket feature can be
 enabled to host a JAXRS service that can be invoked using SwaggerSocket. This sample
-does not use SwaggerSocketServlet but instead configures the CXF bus to use the SwaggerSocket protocol interceptor to nable SwaggerSocket.
+does not use SwaggerSocketServlet but instead configures the CXF bus to use the SwaggerSocket protocol interceptor to nable SwaggerSocket ([context.xml](https://github.com/elakito/swaggersocket-samples/blob/master/cxf_echo_service/src/main/webapp/WEB-INF/context.xml)).
 
 * [osgi_cxf_echo_service](osgi_cxf_echo_service/README.md)
 
