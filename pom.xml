@@ -13,6 +13,7 @@
     <ahc-version>1.8.14</ahc-version>
     <aries-blueprint-api-version>1.0.0</aries-blueprint-api-version>
     <atmosphere-version>2.2.7</atmosphere-version>
+    <atmosphere-client-version>2.2.11</atmosphere-client-version>
     <atmosphere-version-range>[2.0,3)</atmosphere-version-range>
     <cxf-version>3.0.5</cxf-version>
     <cxf-version-range>[2.6,4)</cxf-version-range>
@@ -22,16 +23,17 @@
     <junit-version>4.11</junit-version>
     <maven-surefire-report-plugin-version>2.17</maven-surefire-report-plugin-version>
     <netty3-version>3.9.1.Final</netty3-version>
-    <olingo-version>4.0.0-beta-03-SNAPSHOT</olingo-version>
+    <olingo-version>4.0.0-SNAPSHOT</olingo-version>
     <osgi-version>4.2.0</osgi-version>
     <spring-version>3.2.6.RELEASE</spring-version>
-    <swaggersocket-version>2.0.2-SNAPSHOT</swaggersocket-version>
+    <swaggersocket-version>2.0.2</swaggersocket-version>
     <swaggersocket-version-range>[2.0,3)</swaggersocket-version-range>
   </properties>
   <modules>
+    <module>cxf_echo_service</module>
     <module>osgi_cxf_echo_service</module>
     <module>olingo_car_server</module>
-
+    <module>osgi_olingo_car_server</module>
   </modules>
   <build>
     <defaultGoal>install</defaultGoal>

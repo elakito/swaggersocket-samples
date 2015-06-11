@@ -94,7 +94,7 @@
             <Import-Package>
               javax.ws.rs.core,
               org.osgi.service.blueprint,
-			  org.apache.cxf.message;version="${cxf-version-range}",
+              org.apache.cxf.message;version="${cxf-version-range}",
               org.atmosphere.org.atmosphere.cpr;version="${atmosphere-version-range}";resolution:=optional,
               org.atmosphere.org.atmosphere.util;version="${atmosphere-version-range}";resolution:=optional,
               org.atmosphere.org.atmosphere.websocket;version="${atmosphere-version-range}";resolution:=optional,

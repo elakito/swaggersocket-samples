@@ -61,19 +61,25 @@
     <dependency>
       <groupId>org.atmosphere</groupId>
       <artifactId>atmosphere-runtime</artifactId>
-	  <version>${atmosphere-version}</version>
+      <version>${atmosphere-version}</version>
     </dependency>
 
     <dependency>
       <groupId>com.wordnik</groupId>
       <artifactId>swaggersocket-server</artifactId>
-	  <version>${swaggersocket-version}</version>
+      <version>${swaggersocket-version}</version>
     </dependency>
 
     <dependency>
+      <groupId>org.atmosphere.client</groupId>
+      <artifactId>jquery</artifactId>
+      <version>${atmosphere-client-version}</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
       <groupId>com.wordnik</groupId>
       <artifactId>swaggersocket.jquery</artifactId>
-	  <version>${swaggersocket-version}</version>
+      <version>${swaggersocket-version}</version>
       <type>war</type>
     </dependency>
 
@@ -143,4 +149,26 @@
       </build>
     </profile>
   </profiles>
+  <build>
+    <plugins>
+      <plugin>
+        <executions>
+          <execution>
+            <id>distro-war</id>
+            <phase>package</phase>
+            <goals>
+              <goal>war</goal>
+            </goals>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <!-- excludes *-min.js in the sample war -->
+          <packagingExcludes>jquery/*-min.js</packagingExcludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

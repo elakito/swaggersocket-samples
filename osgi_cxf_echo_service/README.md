@@ -76,7 +76,7 @@ For further details, please refer to [Karaf User Guide](http://karaf.apache.org/
 To install the SwaggerSocket feature, run the following karaf console commands.
 
 ```bash
-feature:repo-add mvn:com.wordnik/swaggersocket-karaf-features/2.0.1/xml/features
+feature:repo-add mvn:com.wordnik/swaggersocket-karaf-features/2.0.2/xml/features
 feature:install swaggersocket-server
 ```
 
@@ -86,7 +86,7 @@ To install the CXF websocket feature, run the following karaf console
 commands. (Note we need CXF 3.0.5 or newer to get the integrated atmosphere support)
 
 ```bash
-  feature:repo-add cxf 3.0.5-SNAPSHOT
+  feature:repo-add cxf 3.0.5
   feature:install cxf-jaxrs cxf-transports-websocket-server
 ```
 
@@ -101,22 +101,25 @@ To install this sample bundle, run the karaf console command.
 Shown below is the output from running the above Karaf console commands.
 
 ```bash
-karaf@root()> feature:repo-add mvn:com.wordnik/swaggersocket-karaf-features/2.0.1/xml/features
-Adding feature url mvn:com.wordnik/swaggersocket-karaf-features/2.0.1/xml/features
+karaf@root()> feature:repo-add mvn:com.wordnik/swaggersocket-karaf-features/2.0.2/xml/features
+Adding feature url mvn:com.wordnik/swaggersocket-karaf-features/2.0.2/xml/features
 karaf@root()> feature:install swaggersocket-server
-karaf@root()>   feature:repo-add cxf 3.0.5-SNAPSHOT
-Adding feature url mvn:org.apache.cxf.karaf/apache-cxf/3.0.5-SNAPSHOT/xml/features
-karaf@root()>   feature:install cxf-jaxrs cxf-transports-websocket-server
+karaf@root()> feature:repo-add cxf 3.0.5
+Adding feature url mvn:org.apache.cxf.karaf/apache-cxf/3.0.5/xml/features
+karaf@root()> feature:install cxf-jaxrs cxf-transports-websocket-server
 Refreshing bundles org.ops4j.pax.web.pax-web-jetty (80), org.apache.geronimo.specs.geronimo-jaspic_1.0_spec (69), org.ops4j.pax.web.pax-web-runtime (79)
+karaf@root()> install -s mvn:de.elakito.swaggersocket.samples/osgi-cxf-echo-service
+Bundle ID: 120
 karaf@root()> list
 START LEVEL 100 , List Threshold: 50
-ID | State  | Lvl | Version | Name                  
-----------------------------------------------------
-90 | Active |  80 | 2.2.6   | atmosphere-runtime    
-91 | Active |  80 | 2.0.1   | swaggersocket-protocol
-92 | Active |  80 | 2.0.1   | swaggersocket-server  
-karaf@root()>   install -s mvn:de.elakito.swaggersocket.samples/osgi-cxf-echo-service
-Bundle ID: 119
+ ID | State  | Lvl | Version        | Name                                                  
+--------------------------------------------------------------------------------------------
+ 90 | Active |  80 | 2.2.7          | atmosphere-runtime                                    
+ 91 | Active |  80 | 2.0.2          | swaggersocket-protocol                                
+ 92 | Active |  80 | 2.0.2          | swaggersocket-server                                  
+118 | Active |  80 | 2.2.6          | atmosphere-runtime                                    
+120 | Active |  80 | 0.0.1.SNAPSHOT | de.elakito.swaggersocket.samples.osgi-cxf-echo-service
+karaf@root()> 
 ```
 
 You can verify the CXF bus and endpoint are correctly installed and started using cxf:list-busses and cxf:list-endpoints.

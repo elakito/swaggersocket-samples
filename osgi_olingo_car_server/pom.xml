@@ -22,9 +22,9 @@
 <!-- copied from https://github.com/apache/olingo-odata4/tree/master/samples/server and modified for the swaggersocket demo -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<artifactId>osgi-olingo-car-server</artifactId>
-	<packaging>bundle</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>osgi-olingo-car-server</artifactId>
+    <packaging>bundle</packaging>
     <name>${project.groupId}.${project.artifactId}</name>
     <parent>
       <groupId>de.elakito.swaggersocket.samples</groupId>
@@ -32,56 +32,67 @@
       <version>0.0.1-SNAPSHOT</version>
       <relativePath>../pom.xml</relativePath>
     </parent>
-	<dependencies>
+    <dependencies>
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-servlet_3.0_spec</artifactId>
             <version>1.0</version>
         </dependency>
 
-		<dependency>
-			<groupId>org.apache.olingo</groupId>
-			<artifactId>odata-server-api</artifactId>
-			<version>${olingo-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.olingo</groupId>
-			<artifactId>odata-server-core</artifactId>
-			<version>${olingo-version}</version>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.olingo</groupId>
+            <artifactId>odata-server-api</artifactId>
+            <version>${olingo-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.olingo</groupId>
+            <artifactId>odata-server-core</artifactId>
+            <version>${olingo-version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.olingo</groupId>
-			<artifactId>odata-commons-api</artifactId>
-			<version>${olingo-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.olingo</groupId>
-			<artifactId>odata-commons-core</artifactId>
-			<version>${olingo-version}</version>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.olingo</groupId>
+            <artifactId>odata-commons-api</artifactId>
+            <version>${olingo-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.olingo</groupId>
+            <artifactId>odata-commons-core</artifactId>
+            <version>${olingo-version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.atmosphere</groupId>
             <artifactId>atmosphere-runtime</artifactId>
-			<version>${atmosphere-version}</version>
+            <version>${atmosphere-version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.wordnik</groupId>
             <artifactId>swaggersocket-server</artifactId>
-			<version>${swaggersocket-version}</version>
+            <version>${swaggersocket-version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.wordnik</groupId>
-            <artifactId>swaggersocket.jquery</artifactId>
-			<version>${swaggersocket-version}</version>
-            <type>war</type>
-        </dependency>
-	</dependencies>
+    </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${basedir}/../olingo_car_server/src/main</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
@@ -103,7 +114,7 @@
                             org.eclipse.jetty.util.ssl;resolution:=optional,
                             *
                         </Import-Package>
-                        <_wab>src/main/webapp/</_wab>
+                        <_wab>${basedir}/../olingo_car_server/src/main/webapp/</_wab>
                         <Web-ContextPath>swaggersocket-olingo-cars</Web-ContextPath>
                     </instructions>
                 </configuration>
