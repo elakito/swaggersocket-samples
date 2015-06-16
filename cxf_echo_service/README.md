@@ -35,6 +35,15 @@ Using Browser, open [http://localhost:8080/RestContext/swaggersocket_echo/](http
 
 Enter some text and publish it to the server. You can choose the operation implemented by the echo service.
 
+The following operations are implemented:
+
+* echo: a POST service that returns the input message. There are special messages: "secret" 
+  triggers an exception and "sleep n" sleeps for n seconds before returning the response.
+* ohce: a POST service that returns the reversed input message.
+* xbox: a GET service that returns an XML enveloped response.
+* jbox: a GET service that returns an JSON enveloped response.
+* put: a PUT service that returns no response content.
+
 To observe the detailed interaction, you can go to the [fallback page](http://localhost:8080/RestContext/swaggersocket_echo/fallback), which can display each SwaggerSocket messages that are sent and received.
 
 You can also try the node.js client of sample [echo-nodjs](../echo-nodejs/README.md) with the target URL: http://localhost:8080/RestContext/swaggersocket_echo
