@@ -9,7 +9,7 @@ project page at
 [https://github.com/swagger-api/swagger-socket](https://github.com/swagger-api/swagger-socket)
 
 This demo uses CXF's integrated Atmosphere feature where you can attach
-the SwaggerSocket protocol interceptor to the CXF bus in its configuration file [context.xml](osgi_cxf_echo_service/src/main/resources/OSGI-INF/blueprint/context.xml). The echo service itself is from the echo service of the SwaggerSocket samples [https://github.com/swagger-api/swagger-socket/tree/master/samples/swaggersocket-cxf-echo](https://github.com/swagger-api/swagger-socket/tree/master/samples/swaggersocket-cxf-echo).
+the SwaggerSocket protocol interceptor to the CXF bus in its blueprint configuration file [context.xml](src/main/resources/OSGI-INF/blueprint/context.xml). The echo service itself is from the echo service of the SwaggerSocket samples [https://github.com/swagger-api/swagger-socket/tree/master/samples/swaggersocket-cxf-echo](https://github.com/swagger-api/swagger-socket/tree/master/samples/swaggersocket-cxf-echo).
 
 
 Building
